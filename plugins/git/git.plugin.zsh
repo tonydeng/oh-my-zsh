@@ -59,7 +59,6 @@ alias gco='git checkout'
 alias gcor='git checkout --recurse-submodules'
 alias gcount='git shortlog --summary --numbered'
 alias gcp='git cherry-pick'
-
 alias gcpa='git cherry-pick --abort'
 alias gcpc='git cherry-pick --continue'
 alias gcs='git commit --gpg-sign'
