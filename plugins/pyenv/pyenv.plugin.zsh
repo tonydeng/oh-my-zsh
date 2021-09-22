@@ -67,6 +67,9 @@ if [[ $FOUND_PYENV -eq 1 ]]; then
     # on this plugin exporting it. pyenv itself does not require it to be exported
     export PYENV_ROOT="$(pyenv root)"
   fi
+  
+  PYENV_VERSION="$(pyenv --version | cut -d ' ' -f 2)"
+  is-at-least 1.2.27-21 "$PYENV_VERSION" && eval "$(pyenv init --path)"
 
   # Add pyenv shims to $PATH if not already added
   if [[ -z "${path[(Re)$(pyenv root)/shims]}" ]]; then
