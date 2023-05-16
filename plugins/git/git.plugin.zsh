@@ -59,6 +59,25 @@ alias gco='git checkout'
 alias gcor='git checkout --recurse-submodules'
 alias gcount='git shortlog --summary --numbered'
 alias gcp='git cherry-pick'
+compdef _git gcp=git-cherry-pick
+alias glg='git log --stat --max-count=10'
+compdef _git glg=git-log
+alias glgg='git log --graph --max-count=10'
+compdef _git glgg=git-log
+alias glgga='git log --graph --decorate --all'
+compdef _git glgga=git-log
+alias glo='git log --oneline --decorate --color'
+compdef _git glo=git-log
+alias glog='git log --oneline --decorate --color --graph'
+compdef _git glog=git-log
+alias gss='git status -s'
+compdef _git gss=git-status
+alias ga='git add'
+compdef _git ga=git-add
+alias gap='git add --patch'
+alias gaa='git add --all'
+#alias gm='git merge'
+compdef _git gm=git-merge
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 alias gclean='git reset --hard && git clean -dfx'
