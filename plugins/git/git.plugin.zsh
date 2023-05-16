@@ -156,7 +156,6 @@ alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
 # Sign and verify commits with GPG
 alias gcs='git commit -S'
->>>>>>> a48c21d7 (去掉gm的alias)
 
 alias gd='git diff'
 alias gdca='git diff --cached'
