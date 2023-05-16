@@ -146,13 +146,7 @@ alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gcs='git commit -S'
 alias gcss='git commit -S -s'
 alias gcssm='git commit -S -s -m'
->>>>>>> 030256b47f1cfc0b93dc6c71ece4d7d30ba24240
-alias gcpa='git cherry-pick --abort'
-alias gcpc='git cherry-pick --continue'
-alias gcs='git commit --gpg-sign'
-alias gcss='git commit --gpg-sign --signoff'
-alias gcssm='git commit --gpg-sign --signoff --message'
-=======
+
 compdef _git gcp=git-cherry-pick
 alias glg='git log --stat --max-count=10'
 compdef _git glg=git-log
@@ -179,7 +173,6 @@ alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
 # Sign and verify commits with GPG
 alias gcs='git commit -S'
->>>>>>> a48c21d7 (去掉gm的alias)
 
 alias gd='git diff'
 alias gdca='git diff --cached'
