@@ -76,12 +76,13 @@ alias ga='git add'
 compdef _git ga=git-add
 alias gap='git add --patch'
 alias gaa='git add --all'
-alias gm='git merge'
+#alias gm='git merge'
 compdef _git gm=git-merge
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
 alias gclean='git reset --hard && git clean -dfx'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+
 # Sign and verify commits with GPG
 alias gcs='git commit -S'
 alias gd='git diff'
@@ -299,13 +300,6 @@ alias gamc='git am --continue'
 alias gams='git am --skip'
 alias gama='git am --abort'
 alias gamscp='git am --show-current-patch'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 50a2a3b5 (注释gm别名)
->>>>>>> 72fbdaa6 (注释gm别名)
-=======
->>>>>>> abef4eea (去掉gm的alias)
 
 function grename() {
   if [[ -z "$1" || -z "$2" ]]; then
