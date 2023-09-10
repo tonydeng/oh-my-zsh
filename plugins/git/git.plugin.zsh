@@ -287,6 +287,10 @@ alias gamc='git am --continue'
 alias gams='git am --skip'
 alias gama='git am --abort'
 alias gamscp='git am --show-current-patch'
+<<<<<<< HEAD
+=======
+>>>>>>> 50a2a3b5 (注释gm别名)
+>>>>>>> 4dfacf25 (注释gm别名)
 
 function grename() {
   if [[ -z "$1" || -z "$2" ]]; then
