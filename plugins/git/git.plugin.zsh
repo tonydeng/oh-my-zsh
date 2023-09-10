@@ -94,9 +94,6 @@ alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 # Sign and verify commits with GPG
 alias gcs='git commit -S'
 
-# Sign and verify commits with GPG
-alias gcs='git commit -S'
-
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gdcw='git diff --cached --word-diff'
