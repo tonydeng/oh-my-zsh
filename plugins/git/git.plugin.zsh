@@ -59,14 +59,6 @@ alias gco='git checkout'
 alias gcor='git checkout --recurse-submodules'
 alias gcount='git shortlog --summary --numbered'
 alias gcp='git cherry-pick'
-<<<<<<< HEAD
-alias gcpa='git cherry-pick --abort'
-alias gcpc='git cherry-pick --continue'
-alias gcs='git commit --gpg-sign'
-alias gcss='git commit --gpg-sign --signoff'
-alias gcssm='git commit --gpg-sign --signoff --message'
-=======
->>>>>>> d7659148 (:bug: fix(1.0): 避免了mvnd和maven-plugin的别名冲突)
 compdef _git gcp=git-cherry-pick
 alias glg='git log --stat --max-count=10'
 compdef _git glg=git-log
@@ -84,7 +76,6 @@ alias ga='git add'
 compdef _git ga=git-add
 alias gap='git add --patch'
 alias gaa='git add --all'
-#alias gm='git merge'
 compdef _git gm=git-merge
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
@@ -113,7 +104,7 @@ alias ga='git add'
 compdef _git ga=git-add
 alias gap='git add --patch'
 alias gaa='git add --all'
-#alias gm='git merge'
+alias gm='git merge'
 compdef _git gm=git-merge
 alias grh='git reset HEAD'
 alias grhh='git reset HEAD --hard'
@@ -233,7 +224,6 @@ alias glog='git log --oneline --decorate --graph'
 alias gloga='git log --oneline --decorate --graph --all'
 alias glp="_git_log_prettily"
 
-#alias gm='git merge'
 alias gmom='git merge origin/master'
 alias gmt='git mergetool --no-prompt'
 alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
