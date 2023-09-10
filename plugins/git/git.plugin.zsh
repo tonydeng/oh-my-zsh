@@ -65,6 +65,7 @@ alias gcs='git commit --gpg-sign'
 alias gcss='git commit --gpg-sign --signoff'
 alias gcssm='git commit --gpg-sign --signoff --message'
 
+
 alias gd='git diff'
 alias gdca='git diff --cached'
 alias gdcw='git diff --cached --word-diff'
@@ -280,7 +281,6 @@ alias gamc='git am --continue'
 alias gams='git am --skip'
 alias gama='git am --abort'
 alias gamscp='git am --show-current-patch'
->>>>>>> 50a2a3b5 (注释gm别名)
 
 function grename() {
   if [[ -z "$1" || -z "$2" ]]; then
