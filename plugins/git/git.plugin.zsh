@@ -60,6 +60,8 @@ alias gcs='git commit --gpg-sign'
 alias gcss='git commit --gpg-sign --signoff'
 alias gcssm='git commit --gpg-sign --signoff --message'
 
+# Sign and verify commits with GPG
+alias gcs='git commit -S'
 
 alias gd='git diff'
 alias gdca='git diff --cached'
