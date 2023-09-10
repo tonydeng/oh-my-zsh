@@ -62,16 +62,32 @@ if [[ $FOUND_PYENV -ne 1 ]]; then
 fi
 
 if [[ $FOUND_PYENV -eq 1 ]]; then
+  if [[ -z "$PYENV_ROOT" ]]; then
+    # This is only for backwards compatibility with users that previously relied
+    # on this plugin exporting it. pyenv itself does not require it to be exported
+    export PYENV_ROOT="$(pyenv root)"
+  fi
+  
+  PYENV_VERSION="$(pyenv --version | cut -d ' ' -f 2)"
+  is-at-least 1.2.27-21 "$PYENV_VERSION" && eval "$(pyenv init --path)"
 
-    PYENV_VERSION="$(pyenv --version | cut -d ' ' -f 2)"
-    is-at-least 1.2.27-21 "$PYENV_VERSION" && eval "$(pyenv init --path)"
-    eval "$(pyenv init - --no-rehash zsh)"
-    if (( $+commands[pyenv-virtualenv-init] )); then
-        eval "$(pyenv virtualenv-init - zsh)"
-    fi
-    function pyenv_prompt_info() {
-        echo "$(pyenv version-name)"
-    }
+  # Add pyenv shims to $PATH if not already added
+  if [[ -z "${path[(Re)$(pyenv root)/shims]}" ]]; then
+    eval "$(pyenv init --path)"
+    pyenv_config_warning 'missing pyenv shims in $PATH'
+  fi
+
+  # Load pyenv
+  eval "$(pyenv init - --no-rehash zsh)"
+
+  # If pyenv-virtualenv exists, load it
+  if [[ -d "$(pyenv root)/plugins/pyenv-virtualenv" && "$ZSH_PYENV_VIRTUALENV" != false ]]; then
+    eval "$(pyenv virtualenv-init - zsh)"
+  fi
+
+  function pyenv_prompt_info() {
+    echo "$(pyenv version-name)"
+  }
 else
   # Fall back to system python
   function pyenv_prompt_info() {
