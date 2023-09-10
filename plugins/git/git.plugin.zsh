@@ -54,13 +54,6 @@ alias gco='git checkout'
 alias gcor='git checkout --recurse-submodules'
 alias gcount='git shortlog --summary --numbered'
 alias gcp='git cherry-pick'
-<<<<<<< HEAD
-alias gcpa='git cherry-pick --abort'
-alias gcpc='git cherry-pick --continue'
-alias gcs='git commit --gpg-sign'
-alias gcss='git commit --gpg-sign --signoff'
-alias gcssm='git commit --gpg-sign --signoff --message'
-=======
 compdef _git gcp=git-cherry-pick
 alias glg='git log --stat --max-count=10'
 compdef _git glg=git-log
@@ -87,7 +80,6 @@ alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
 # Sign and verify commits with GPG
 alias gcs='git commit -S'
->>>>>>> a48c21d7 (去掉gm的alias)
 
 # Sign and verify commits with GPG
 alias gcs='git commit -S'
