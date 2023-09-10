@@ -62,7 +62,6 @@ if [[ $FOUND_PYENV -ne 1 ]]; then
 fi
 
 if [[ $FOUND_PYENV -eq 1 ]]; then
-<<<<<<< HEAD
   if [[ -z "$PYENV_ROOT" ]]; then
     # This is only for backwards compatibility with users that previously relied
     # on this plugin exporting it. pyenv itself does not require it to be exported
@@ -89,7 +88,6 @@ if [[ $FOUND_PYENV -eq 1 ]]; then
   function pyenv_prompt_info() {
     echo "$(pyenv version-name)"
   }
-=======
     PYENV_VERSION="$(pyenv --version | cut -d ' ' -f 2)"
     is-at-least 1.2.27-21 "$PYENV_VERSION" && eval "$(pyenv init --path)"
     eval "$(pyenv init - --no-rehash zsh)"
@@ -99,7 +97,6 @@ if [[ $FOUND_PYENV -eq 1 ]]; then
     function pyenv_prompt_info() {
         echo "$(pyenv version-name)"
     }
->>>>>>> 3a53ec88 (:bug: fix(1.0): 修复pyenv的bug)
 else
   # Fall back to system python
   function pyenv_prompt_info() {
