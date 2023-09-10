@@ -88,15 +88,6 @@ if [[ $FOUND_PYENV -eq 1 ]]; then
   function pyenv_prompt_info() {
     echo "$(pyenv version-name)"
   }
-    PYENV_VERSION="$(pyenv --version | cut -d ' ' -f 2)"
-    is-at-least 1.2.27-21 "$PYENV_VERSION" && eval "$(pyenv init --path)"
-    eval "$(pyenv init - --no-rehash zsh)"
-    if (( $+commands[pyenv-virtualenv-init] )); then
-        eval "$(pyenv virtualenv-init - zsh)"
-    fi
-    function pyenv_prompt_info() {
-        echo "$(pyenv version-name)"
-    }
 else
   # Fall back to system python
   function pyenv_prompt_info() {
