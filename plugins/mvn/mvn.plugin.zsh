@@ -62,9 +62,13 @@ alias mvncp='mvn clean package'
 alias mvnct='mvn clean test'
 alias mvncv='mvn clean verify'
 alias mvncvst='mvn clean verify -DskipTests'
+<<<<<<< HEAD
 
 # alias mvnd='mvn deploy'
 
+=======
+# alias mvnd='mvn deploy'
+>>>>>>> 585df953 (:bug: fix(1.0): 避免了mvnd和maven-plugin的别名冲突)
 alias mvndocs='mvn dependency:resolve -Dclassifier=javadoc'
 alias mvndt='mvn dependency:tree'
 alias mvne='mvn eclipse:eclipse'
