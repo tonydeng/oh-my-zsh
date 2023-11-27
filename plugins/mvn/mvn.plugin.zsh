@@ -62,13 +62,7 @@ alias mvncp='mvn clean package'
 alias mvnct='mvn clean test'
 alias mvncv='mvn clean verify'
 alias mvncvst='mvn clean verify -DskipTests'
-<<<<<<< HEAD
 # alias mvnd='mvn deploy'
-=======
-
-# alias mvnd='mvn deploy'
-
->>>>>>> 90e5566e6165de7d9dee2394106854e6dd9c9675
 alias mvndocs='mvn dependency:resolve -Dclassifier=javadoc'
 alias mvndt='mvn dependency:tree'
 alias mvne='mvn eclipse:eclipse'
